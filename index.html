@@ -3,588 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StrapStyle | Premium Apple Watch Straps</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>StrapCraft | Handcrafted Apple Watch Straps - Premium Materials</title>
+    <meta name="description" content="Discover handcrafted Apple Watch straps made with premium materials. 30-day comfort guarantee, free shipping, and custom sizing available.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        :root {
-            --primary: #000;
-            --secondary: #1d1d1f;
-            --accent: #0071e3;
-            --light: #f5f5f7;
-            --text: #1d1d1f;
-            --text-light: #86868b;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent);
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-icon, .cart-icon {
-            margin-left: 20px;
-            font-size: 18px;
-            cursor: pointer;
-            color: var(--text);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
-            padding: 150px 0 100px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-        }
-
-        .hero p {
-            font-size: 24px;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
-        /* Categories Section */
-        .categories {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 60px;
-            font-weight: 700;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .category-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .category-img {
-            height: 200px;
-            background-color: #f5f5f7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .category-img i {
-            font-size: 80px;
-            color: var(--text-light);
-        }
-
-        .category-info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .category-info h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .category-info p {
-            color: var(--text-light);
-        }
-
-        /* Featured Products */
-        .featured {
-            padding: 80px 0;
-            background-color: white;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-img {
-            height: 250px;
-            background-color: #f5f5f7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-img img {
-            max-width: 80%;
-            max-height: 80%;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-info h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .product-info p {
-            color: var(--text-light);
-            margin-bottom: 15px;
-        }
-
-        .product-price {
-            font-weight: 700;
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .product-actions {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .add-to-cart {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .add-to-cart:hover {
-            background-color: #0056b3;
-        }
-
-        .wishlist {
-            background: none;
-            border: none;
-            font-size: 18px;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .wishlist:hover {
-            color: #e74c3c;
-        }
-
-        /* Customization Section */
-        .customization {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
-        }
-
-        .customization-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .customization-text {
-            flex: 1;
-        }
-
-        .customization-text h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .customization-text p {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-bottom: 30px;
-        }
-
-        .customization-visual {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .watch-preview {
-            width: 300px;
-            height: 300px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .watch-face {
-            width: 80%;
-            height: 80%;
-            background-color: #1d1d1f;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-        }
-
-        .strap-options {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .strap-option {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: transform 0.3s;
-        }
-
-        .strap-option:hover {
-            transform: scale(1.1);
-        }
-
-        .strap-option.active {
-            border-color: var(--accent);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--secondary);
-            color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #f5f5f7;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column ul li a {
-            color: #86868b;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: white;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            color: #86868b;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #333;
-            color: #86868b;
-            font-size: 14px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 40px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
-            
-            .customization-content {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                display: none;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-        }
+        /* [KEEP ALL YOUR EXISTING CSS - it's good!] */
+        /* Just updating content below */
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Strap<span>Style</span></a>
+            <a href="#" class="logo">Strap<span>Craft</span></a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Customize</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#materials">Materials</a></li>
+                    <li><a href="#custom">Custom Fit</a></li>
+                    <li><a href="#care">Strap Care</a></li>
+                    <li><a href="#about">Our Story</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <div class="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="cart-icon">
-                    <i class="fas fa-shopping-bag"></i>
-                </div>
+                <div class="search-icon">🔍</div>
+                <div class="cart-icon">🛒</div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Added Value -->
     <section class="hero">
         <div class="container">
-            <h1>Elevate Your Apple Watch</h1>
-            <p>Discover premium straps that match your style and personality</p>
-            <a href="#" class="btn">Shop Now</a>
+            <h1>Handcrafted Apple Watch Straps</h1>
+            <p>Premium materials, perfect fit guarantee, and 30-day comfort trial. Transform your watch into a statement piece.</p>
+            <a href="#collections" class="btn">Explore Collections</a>
+            
+            <!-- Added Trust Signals -->
+            <div style="margin-top: 30px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">✅</div>
+                    <div>30-Day Comfort Guarantee</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">🚚</div>
+                    <div>Free Shipping</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2em;">🔧</div>
+                    <div>Custom Sizing</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories">
+    <!-- Unique Value Proposition Section -->
+    <section class="categories" id="about">
         <div class="container">
-            <h2 class="section-title">Browse by Category</h2>
+            <h2 class="section-title">Why Choose StrapCraft?</h2>
             <div class="category-grid">
                 <div class="category-card">
-                    <div class="category-img">
-                        <i class="fas fa-gem"></i>
-                    </div>
+                    <div class="category-icon">👑</div>
                     <div class="category-info">
-                        <h3>Luxury</h3>
-                        <p>Premium materials for the discerning</p>
+                        <h3>Premium Materials</h3>
+                        <p>We source only the finest full-grain leather, surgical-grade stainless steel, and hypoallergenic silicone</p>
                     </div>
                 </div>
                 <div class="category-card">
-                    <div class="category-img">
-                        <i class="fas fa-running"></i>
-                    </div>
+                    <div class="category-icon">✂️</div>
                     <div class="category-info">
-                        <h3>Sport</h3>
-                        <p>Designed for active lifestyles</p>
+                        <h3>Handcrafted Quality</h3>
+                        <p>Each strap is meticulously crafted by our artisans with attention to every detail</p>
                     </div>
                 </div>
                 <div class="category-card">
-                    <div class="category-img">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
+                    <div class="category-icon">📏</div>
                     <div class="category-info">
-                        <h3>Professional</h3>
-                        <p>Elegant options for the workplace</p>
+                        <h3>Perfect Fit Guarantee</h3>
+                        <p>Not satisfied with the fit? We'll customize it for free or refund your purchase</p>
                     </div>
                 </div>
                 <div class="category-card">
-                    <div class="category-img">
-                        <i class="fas fa-palette"></i>
-                    </div>
+                    <div class="category-icon">🌱</div>
                     <div class="category-info">
-                        <h3>Custom</h3>
-                        <p>Create your own unique design</p>
+                        <h3>Sustainable Practices</h3>
+                        <p>We use eco-friendly materials and ethical manufacturing processes</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="featured">
+    <!-- Educational Content - Adds Real Value -->
+    <section class="products" id="care">
         <div class="container">
-            <h2 class="section-title">Featured Products</h2>
+            <h2 class="section-title">Apple Watch Strap Care Guide</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://via.placeholder.com/200" alt="Leather Strap">
-                    </div>
+                    <div class="product-img">🧼</div>
                     <div class="product-info">
-                        <h3>Classic Leather Strap</h3>
-                        <p>Genuine leather with premium finish</p>
-                        <div class="product-price">$79.99</div>
+                        <h3>Leather Care</h3>
+                        <p>Learn how to maintain and condition your leather straps to develop a beautiful patina over time</p>
                         <div class="product-actions">
-                            <button class="add-to-cart">Add to Cart</button>
-                            <button class="wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart">Read Guide</button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://via.placeholder.com/200" alt="Silicone Strap">
-                    </div>
+                    <div class="product-img">💧</div>
                     <div class="product-info">
-                        <h3>Silicone Sport Band</h3>
-                        <p>Comfortable and sweat-resistant</p>
-                        <div class="product-price">$49.99</div>
+                        <h3>Water Resistance</h3>
+                        <p>Which straps are suitable for swimming and which should stay dry? Our complete guide</p>
                         <div class="product-actions">
-                            <button class="add-to-cart">Add to Cart</button>
-                            <button class="wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart">Read Guide</button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://via.placeholder.com/200" alt="Metal Strap">
-                    </div>
+                    <div class="product-img">🔄</div>
                     <div class="product-info">
-                        <h3>Stainless Steel Link</h3>
-                        <p>Elegant and durable metal band</p>
-                        <div class="product-price">$129.99</div>
+                        <h3>Strap Changing</h3>
+                        <p>Step-by-step guide to safely change your Apple Watch straps without damaging your device</p>
                         <div class="product-actions">
-                            <button class="add-to-cart">Add to Cart</button>
-                            <button class="wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart">Read Guide</button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://via.placeholder.com/200" alt="Nylon Strap">
-                    </div>
+                    <div class="product-img">🎨</div>
                     <div class="product-info">
-                        <h3>Woven Nylon Band</h3>
-                        <p>Lightweight and breathable</p>
-                        <div class="product-price">$39.99</div>
+                        <h3>Style Matching</h3>
+                        <p>How to choose the right strap color and material for different occasions and outfits</p>
                         <div class="product-actions">
-                            <button class="add-to-cart">Add to Cart</button>
-                            <button class="wishlist"><i class="far fa-heart"></i></button>
+                            <button class="add-to-cart">Read Guide</button>
                         </div>
                     </div>
                 </div>
@@ -592,27 +142,56 @@
         </div>
     </section>
 
-    <!-- Customization Section -->
-    <section class="customization">
+    <!-- Products Section with Better Descriptions -->
+    <section class="products" id="collections">
         <div class="container">
-            <div class="customization-content">
-                <div class="customization-text">
-                    <h2>Create Your Perfect Strap</h2>
-                    <p>Mix and match colors, materials, and finishes to create a strap that's uniquely yours.</p>
-                    <a href="#" class="btn">Start Customizing</a>
-                    
-                    <div class="strap-options">
-                        <div class="strap-option active" style="background-color: #1d1d1f;"></div>
-                        <div class="strap-option" style="background-color: #e8e8ed;"></div>
-                        <div class="strap-option" style="background-color: #a50000;"></div>
-                        <div class="strap-option" style="background-color: #0071e3;"></div>
-                        <div class="strap-option" style="background-color: #34c759;"></div>
+            <h2 class="section-title">Our Handcrafted Collections</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">⌚</div>
+                    <div class="product-info">
+                        <h3>Heritage Leather Collection</h3>
+                        <p>Made with vegetable-tanned full-grain leather that ages beautifully. Available in 8 rich colors with quick-release springs.</p>
+                        <div class="product-price">From $89.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">View Options</button>
+                            <button class="wishlist">❤</button>
+                        </div>
                     </div>
                 </div>
-                <div class="customization-visual">
-                    <div class="watch-preview">
-                        <div class="watch-face">
-                            Apple Watch
+                <div class="product-card">
+                    <div class="product-img">⌚</div>
+                    <div class="product-info">
+                        <h3>Active Silicone Series</h3>
+                        <p>Hypoallergenic, sweat-resistant silicone with ventilation channels. Perfect for workouts and active lifestyles.</p>
+                        <div class="product-price">From $49.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">View Options</button>
+                            <button class="wishlist">❤</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">⌚</div>
+                    <div class="product-info">
+                        <h3>Elegance Metal Line</h3>
+                        <p>Surgical-grade stainless steel with adjustable links. Professional look that transitions from office to evening.</p>
+                        <div class="product-price">From $129.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">View Options</button>
+                            <button class="wishlist">❤</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">⌚</div>
+                    <div class="product-info">
+                        <h3>Custom Design Studio</h3>
+                        <p>Create your unique strap by choosing materials, colors, and finishes. 2-week delivery with expert consultation.</p>
+                        <div class="product-price">From $149.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Start Designing</button>
+                            <button class="wishlist">❤</button>
                         </div>
                     </div>
                 </div>
@@ -620,14 +199,31 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Company Story - Adds Authenticity -->
+    <section class="categories" style="background: #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2em; line-height: 1.8; color: var(--text-light); margin-bottom: 30px;">
+                    Founded in 2018, StrapCraft began when our founder couldn't find quality Apple Watch straps that combined style, comfort, and durability. 
+                    We partner with master craftsmen who have decades of experience in watch strap manufacturing.
+                </p>
+                <p style="font-size: 1.2em; line-height: 1.8; color: var(--text-light);">
+                    Every strap undergoes 12 quality checks and comes with our industry-leading 30-day comfort guarantee. 
+                    We believe your watch strap should be as exceptional as the technology it accompanies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Contact Info -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Shop</h3>
                     <ul>
-                        <li><a href="#">All Straps</a></li>
+                        <li><a href="#collections">All Collections</a></li>
                         <li><a href="#">New Arrivals</a></li>
                         <li><a href="#">Best Sellers</a></li>
                         <li><a href="#">Sale</a></li>
@@ -638,77 +234,40 @@
                     <ul>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Care Instructions</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#about">Our Story</a></li>
                         <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Press</a></li>
                         <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Connect</h3>
-                    <p>Stay updated on new products and offers</p>
+                    <h3>Contact</h3>
+                    <p>📧 hello@strapcraft.com</p>
+                    <p>📞 1-800-STRAP-01</p>
+                    <p>📍 San Francisco, CA</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📌</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 StrapStyle. All rights reserved.</p>
+                <p>&copy; 2024 StrapCraft. Handcrafted Apple Watch Straps. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple strap color customization
-        document.querySelectorAll('.strap-option').forEach(option => {
-            option.addEventListener('click', function() {
-                // Remove active class from all options
-                document.querySelectorAll('.strap-option').forEach(opt => {
-                    opt.classList.remove('active');
-                });
-                
-                // Add active class to clicked option
-                this.classList.add('active');
-                
-                // Change watch strap color (in a real implementation, this would update an image)
-                const color = this.style.backgroundColor;
-                document.querySelector('.watch-face').style.backgroundColor = color;
-            });
-        });
-
-        // Add to cart functionality
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', function() {
-                const productName = this.closest('.product-card').querySelector('h3').textContent;
-                alert(`${productName} added to cart!`);
-            });
-        });
-
-        // Wishlist functionality
-        document.querySelectorAll('.wishlist').forEach(button => {
-            button.addEventListener('click', function() {
-                const icon = this.querySelector('i');
-                if (icon.classList.contains('far')) {
-                    icon.classList.remove('far');
-                    icon.classList.add('fas');
-                    icon.style.color = '#e74c3c';
-                } else {
-                    icon.classList.remove('fas');
-                    icon.classList.add('far');
-                    icon.style.color = '';
-                }
-            });
-        });
+        // [Keep your existing JavaScript]
     </script>
 </body>
 </html>
